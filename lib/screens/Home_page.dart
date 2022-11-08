@@ -182,12 +182,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       )
                     : SizedBox(),
-                    FloatingActionButton(onPressed: (){
-                      isBurger = false;
-                      setState(() {
-                        
-                      });
-                    })
+                    
                 
               ],
             ),
