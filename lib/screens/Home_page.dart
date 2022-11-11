@@ -199,6 +199,7 @@ class _HomePageState extends State<HomePage> {
                 margin: EdgeInsets.only(left: 12, top: 12, right: 12),
                 width: 370,
                 height: 48,
+                
                 decoration: BoxDecoration(
                     color: Color(0xfff51267D),
                     borderRadius: BorderRadius.circular(12)),
@@ -206,11 +207,13 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
+                      alignment: Alignment.center,
                       margin: EdgeInsets.only(left: 12,top: 12,bottom: 12),
                       width: 24,
                       height: 24,
+                      child: Text("4",style: TextStyle(color: Colors.white,fontSize: 16)),
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 226, 13, 176),
+                        color: Color.fromARGB(255, 155, 103, 165),
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
