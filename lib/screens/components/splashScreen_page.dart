@@ -3,8 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:task_modul2/screens/main_home_page.dart';
 
-import '../bottomNavBarPage.dart';
+
 
 
 class SplashScreenPage extends StatefulWidget {
@@ -20,7 +21,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     Timer(
         Duration(seconds: 2),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => BottomNavBarPage())));
+            context, MaterialPageRoute(builder: (context) => MainHomePage())));
   }
 
   @override
