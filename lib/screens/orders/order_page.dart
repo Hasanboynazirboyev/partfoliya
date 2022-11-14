@@ -60,13 +60,19 @@ class _BuyurtmaPageState extends State<BuyurtmaPage>
                       color: Colors.white,
                     ),
               tabs: [
-                  Text(
-                        "История заказов",
-                        style: TextStyle(fontSize: 17, color: Colors.black),
-                      ),
-                      Text(
-                        "Текущие заказы",
-                        style: TextStyle(fontSize: 17, color: Colors.black),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12,right: 12),
+                    child: Text(
+                          "История заказов",
+                          style: TextStyle(fontSize: 14, color: Colors.black),
+                        ),
+                  ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 12,right: 12),
+                        child: Text(
+                          "Текущие заказы",
+                          style: TextStyle(fontSize: 14, color: Colors.black),
+                        ),
                       ),
             ]),
           ),),),
@@ -80,7 +86,7 @@ class _BuyurtmaPageState extends State<BuyurtmaPage>
           children: [
             SvgPicture.asset("assets/svg/ic_search_image.svg"),
             Text(
-              "ничего не найден0",
+              "ничего не найденo",
               style: TextStyle(fontSize: 16, color: Color(0xfff818C99)),
             ),
           ],

@@ -77,6 +77,7 @@ class _MaxBurgerPageState extends State<MaxBurgerPage> {
                           ? Container(
                               margin: EdgeInsets.only(
                                   top: 14, left: 8, right: 8, bottom: 8),
+                                  padding: EdgeInsets.symmetric(horizontal: 33.5,vertical: 8),
                               alignment: Alignment.center,
                               height: 40,
                               width: 154,
@@ -84,8 +85,8 @@ class _MaxBurgerPageState extends State<MaxBurgerPage> {
                                   color: Color(0xfffE7E9E8),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Text(
-                                "25000",
-                                style: TextStyle(fontSize: 18),
+                                "25000 sum ",
+                                style: TextStyle(fontSize: 17),
                               ),
                             )
                           : Padding(
@@ -124,7 +125,7 @@ class _MaxBurgerPageState extends State<MaxBurgerPage> {
                                     color: Colors.white,
                                     child: Text(
                                       "${sonlarListi[index]}",
-                                      style: TextStyle(fontSize: 20),
+                                      style: TextStyle(fontSize: 18),
                                     ),
                                   ),
                                   InkWell(

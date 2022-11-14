@@ -49,7 +49,7 @@ class OrderHistory extends StatelessWidget {
                      Container(
                        margin: EdgeInsets.symmetric(horizontal: 6),
                       height: 4,
-                      width: 86,
+                      width: 80,
                       decoration: BoxDecoration(
                         color: Color(0xfff51267D),
                         borderRadius: BorderRadius.circular(12),
@@ -68,7 +68,7 @@ class OrderHistory extends StatelessWidget {
                      Container(
                       margin: EdgeInsets.symmetric(horizontal: 6),
                       height: 4,
-                      width: 86,
+                      width: 80,
                       decoration: BoxDecoration(
                         color: Color(0xfffEBEDF0),
                         borderRadius: BorderRadius.circular(12),

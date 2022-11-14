@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task_modul2/screens/products/basket_page.dart';
 import 'package:task_modul2/screens/products/max_burger_page.dart';
 import 'package:task_modul2/screens/products/tovarMalumotlari.dart';
 import 'package:task_modul2/screens/recomenduem_page.dart';
@@ -63,24 +64,22 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color.fromARGB(255, 239, 236, 236),
         appBar: AppBar(
             systemOverlayStyle: const SystemUiOverlayStyle(
-              statusBarColor: Colors.white, 
-              statusBarIconBrightness:
-                  Brightness.dark, 
-              statusBarBrightness:
-                  Brightness.light, 
+              statusBarColor: Colors.white,
             ),
-            toolbarHeight: 116,
+            toolbarHeight: 90,
             title: Container(
               height: 40,
-              padding: const EdgeInsets.only(left: 14),
-              margin: EdgeInsets.only(top: 60, bottom: 16),
+              padding: const EdgeInsets.only(left: 14,),
+              margin: EdgeInsets.only(top: 40, bottom: 16),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 color: Color.fromARGB(255, 243, 241, 241),
               ),
               child: TextFormField(
+                onTap: () => setState(() => _isPositioned = true),
                 decoration: InputDecoration(
                     hintText: "Поиск",
+                    hintStyle: TextStyle(color: Color(0xfff818C99)),
                     icon: SvgPicture.asset(
                       "assets/svg/ic_search.svg",
                       width: 20,
@@ -108,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                           onTap: () {
                             isTrue[index] = !isTrue[index];
                             currentIndex = index;
-                            _isPositioned = !_isPositioned;
+
 
                             setState(() {});
                           },
@@ -203,27 +202,32 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                     color: Color(0xfff51267D),
                     borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      alignment: Alignment.center,
-                      margin: EdgeInsets.only(left: 12,top: 12,bottom: 12),
-                      width: 24,
-                      height: 24,
-                      child: Text("4",style: TextStyle(color: Colors.white,fontSize: 16)),
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 155, 103, 165),
-                        borderRadius: BorderRadius.circular(12),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => BasketPage(),));
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
+                        margin: EdgeInsets.only(left: 12,top: 12,bottom: 12),
+                        width: 24,
+                        height: 24,
+                        child: Text("1",style: TextStyle(color: Colors.white,fontSize: 16)),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 155, 103, 165),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 110),
-                    Text("корзина",style: TextStyle(color: Colors.white,fontSize: 16),),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 12),
-                      child: Text("25000 sum ",style: TextStyle(color: Colors.white,fontSize: 16),),
-                    ),
-                  ],
+                      SizedBox(height: 110),
+                      Text("корзина",style: TextStyle(color: Colors.white,fontSize: 16),),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 12),
+                        child: Text("25000 sum ",style: TextStyle(color: Colors.white,fontSize: 16),),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
