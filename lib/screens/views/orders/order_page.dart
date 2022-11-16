@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:task_modul2/screens/orders/order_history_page.dart';
+import 'package:task_modul2/screens/views/orders/order_history_page.dart';
 
 class BuyurtmaPage extends StatefulWidget {
   bool? burger;

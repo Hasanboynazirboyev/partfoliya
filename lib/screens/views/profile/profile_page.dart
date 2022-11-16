@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:task_modul2/screens/views/profile/redact_profile.dart';
 
 class ProfilPage extends StatefulWidget {
   const ProfilPage({super.key});
@@ -13,28 +14,55 @@ class ProfilPage extends StatefulWidget {
 }
 
 class _ProfilPageState extends State<ProfilPage> {
+  late String familya;
+  late String ism;
+  late String number;
+
+  @override
+  void initState() {
+    familya = "Toxirov";
+    ism = "Alisher";
+    number = "+998991234567";
+    super.initState();
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfffDFDFDF),
+      backgroundColor: Color.fromRGBO(255, 255, 255, 0.01),
       appBar: AppBar(
         toolbarHeight: 144,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Alisher Toxirov",
-              style: TextStyle(fontSize: 32, color: Colors.black,fontWeight: FontWeight.bold),
+              "$familya $ism",
+              style: TextStyle(
+                  fontSize: 32,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
             ),
             Text(
-              "+998901234567",
+              number,
               style: TextStyle(fontSize: 20, color: Color(0xfff818C99)),
             ),
           ],
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: ((context) => RedactProfil(
+                            familya: familya,
+                            number: number,
+                            ism: ism,
+                            
+                          ))));
+            },
             icon: SvgPicture.asset(
               "assets/svg/ic_edit.svg",
               width: 24,
@@ -46,11 +74,10 @@ class _ProfilPageState extends State<ProfilPage> {
       body: Column(
         children: [
           InkWell(
-            onTap: () {
-              
-            },
+            onTap: () {},
             child: Padding(
-              padding: const EdgeInsets.only(top: 12,bottom: 6,left: 12,right: 12),
+              padding: const EdgeInsets.only(
+                  top: 12, bottom: 6, left: 12, right: 12),
               child: listTileFunc(
                 nomi: "Filiallar",
                 onTap: () {},
@@ -63,11 +90,10 @@ class _ProfilPageState extends State<ProfilPage> {
             ),
           ),
           InkWell(
-            onTap: () {
-              
-            },
+            onTap: () {},
             child: Padding(
-              padding: const EdgeInsets.only(top: 6,bottom: 6,left: 12,right: 12),
+              padding:
+                  const EdgeInsets.only(top: 6, bottom: 6, left: 12, right: 12),
               child: listTileFunc(
                   nomi: "Sozlamalar",
                   leading: SvgPicture.asset(
@@ -75,17 +101,14 @@ class _ProfilPageState extends State<ProfilPage> {
                     height: 24,
                     "assets/svg/ic_settings.svg",
                   ),
-                  onTap: () {
-          
-                  }),
+                  onTap: () {}),
             ),
           ),
           InkWell(
-            onTap: () {
-              
-            },
+            onTap: () {},
             child: Padding(
-              padding: const EdgeInsets.only(top: 6,right: 12,left: 12,bottom: 6),
+              padding:
+                  const EdgeInsets.only(top: 6, right: 12, left: 12, bottom: 6),
               child: listTileFunc(
                   nomi: "Servis haqida",
                   leading: SvgPicture.asset(
@@ -109,13 +132,10 @@ class _ProfilPageState extends State<ProfilPage> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
-      
       alignment: Alignment.center,
-      
       child: ListTile(
         leading: Container(
-          padding: EdgeInsets.all(8),
-         
+            padding: EdgeInsets.all(8),
             height: 40,
             width: 40,
             decoration: BoxDecoration(

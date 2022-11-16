@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task_modul2/screens/views/products/info_products.dart';
 
 class MaxBurgerPage extends StatefulWidget {
   final ValueChanged<bool> update;
@@ -28,7 +29,9 @@ class _MaxBurgerPageState extends State<MaxBurgerPage> {
     return SliverGrid(
         delegate: SliverChildBuilderDelegate(childCount: 4, (context, index) {
           return InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: ((context) => InfoProductsPage())));
+            },
             child: Container(
               alignment: Alignment.center,
               margin: EdgeInsets.only(

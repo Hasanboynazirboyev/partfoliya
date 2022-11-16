@@ -4,8 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'home_page.dart';
-import 'orders/order_page.dart';
-import 'components/profile_page.dart';
+import '../orders/order_page.dart';
+import '../profile/profile_page.dart';
 
 
 

@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 
-import '../products/tovarMalumotlari.dart';
+import '../products/info_products.dart';
 
 
 class SearchPage extends StatefulWidget {
@@ -105,9 +105,8 @@ class _SearchPageState extends State<SearchPage> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: ((context) => TovarMalumotlari(
-                                    imagePath: imagePath[index],
-                                    nomi: maxsulotNomlari[index],
+                              builder: ((context) => InfoProductsPage(
+                                   
                                   ))));
                     },
                     leading: Image.asset(

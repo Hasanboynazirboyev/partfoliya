@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:task_modul2/screens/main_home_page.dart';
+import 'package:task_modul2/screens/views/home/main_home_page.dart';
 
 
 

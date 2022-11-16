@@ -4,12 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:task_modul2/screens/products/basket_page.dart';
-import 'package:task_modul2/screens/products/max_burger_page.dart';
-import 'package:task_modul2/screens/products/tovarMalumotlari.dart';
-import 'package:task_modul2/screens/recomenduem_page.dart';
+import 'package:task_modul2/screens/views/products/basket_page.dart';
+import 'package:task_modul2/screens/views/products/max_burger_page.dart';
+import 'package:task_modul2/screens/views/products/info_products.dart';
+import 'package:task_modul2/screens/views/products/recomenduem_page.dart';
 
-import 'components/searchPage.dart';
+import '../components/searchPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -55,13 +55,13 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
    void _update(bool isPositioned) {
-    setState(() => _isPositioned = isPositioned);
+    setState(() => _isPositioned = isPositioned); 
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 239, 236, 236),
+        
         appBar: AppBar(
             systemOverlayStyle: const SystemUiOverlayStyle(
               statusBarColor: Colors.white,
@@ -188,7 +188,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                MaxBurgerPage(update: _update,),
+                MaxBurgerPage(update: _update),
                 
               ]),
             ),
