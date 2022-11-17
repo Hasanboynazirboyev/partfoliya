@@ -63,7 +63,7 @@ class _MaxBurgerPageState extends State<MaxBurgerPage> {
                     padding: const EdgeInsets.only(left: 8, top: 16),
                     child: Text(
                       "Max Burger",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 18),
                     ),
                   ),
                   Container(

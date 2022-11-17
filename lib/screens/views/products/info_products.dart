@@ -18,7 +18,7 @@ class _InfoProductsPageState extends State<InfoProductsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+
       appBar: AppBar(title: Text("Burger")),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

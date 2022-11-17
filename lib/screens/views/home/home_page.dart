@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:task_modul2/screens/views/products/basket_page.dart';
+import 'package:task_modul2/screens/views/products/backet/basket_page.dart';
 import 'package:task_modul2/screens/views/products/max_burger_page.dart';
 import 'package:task_modul2/screens/views/products/info_products.dart';
 import 'package:task_modul2/screens/views/products/recomenduem_page.dart';
