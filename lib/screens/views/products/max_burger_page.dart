@@ -14,7 +14,7 @@ class MaxBurgerPage extends StatefulWidget {
 }
 
 class _MaxBurgerPageState extends State<MaxBurgerPage> {
-  List isPrice = List.generate(4, (index) => true);
+  List isPrice = List.generate(6, (index) => true);
   bool isBurger = true;
   late num toliqNarx;
   late List sonlarListi;
@@ -27,7 +27,7 @@ class _MaxBurgerPageState extends State<MaxBurgerPage> {
   @override
   Widget build(BuildContext context) {
     return SliverGrid(
-        delegate: SliverChildBuilderDelegate(childCount: 4, (context, index) {
+        delegate: SliverChildBuilderDelegate(childCount: 6, (context, index) {
           return InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: ((context) => InfoProductsPage())));
@@ -35,8 +35,8 @@ class _MaxBurgerPageState extends State<MaxBurgerPage> {
             child: Container(
               alignment: Alignment.center,
               margin: EdgeInsets.only(
-                  left: index == 0 || index == 2 ? 12 : 0,
-                  right: index == 1 || index == 3 ? 12 : 0,
+                  left: index % 2 == 0 ? 12 : 0,
+                  right: index % 2 != 0 ? 12 : 0,
                   top: index == 0 || index == 1 ? 12 : 0),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12), color: Colors.white),
@@ -62,8 +62,8 @@ class _MaxBurgerPageState extends State<MaxBurgerPage> {
                   Padding(
                     padding: const EdgeInsets.only(left: 8, top: 16),
                     child: Text(
-                      "Max Burger",
-                      style: TextStyle(fontSize: 18),
+                      "Макс Бургер",
+                      style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600),
                     ),
                   ),
                   Container(
@@ -89,7 +89,7 @@ class _MaxBurgerPageState extends State<MaxBurgerPage> {
                                   borderRadius: BorderRadius.circular(10)),
                               child: Text(
                                 "25000 sum ",
-                                style: TextStyle(fontSize: 17),
+                                style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400),
                               ),
                             )
                           : Padding(

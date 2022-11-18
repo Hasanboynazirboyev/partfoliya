@@ -41,14 +41,12 @@ class _HomePageState extends State<HomePage> {
     hammasi = true;
     isPrice = List.generate(4, (index) => true);
     maxsulotNomlari = [
-      "Burger",
-      "sendvich",
-      "Lavash",
-      "Kartoshka free",
-      "Donar kabob",
-      "Xaggi",
-      "Burger",
-      "Xotdog",
+      "Бургеры",
+      "Сендвич",
+      "Лаваш",
+      "Картошка фри",
+      "хагги",
+      
     ];
     isTrue = List.generate(maxsulotNomlari.length, (index) => true);
     currentIndex = 0;
@@ -138,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.only(top: 16, left: 12, bottom: 8),
                   sliver: SliverToBoxAdapter(
                     child: Text(
-                      "Recomenduem",
+                      "Рекомендуем",
                       style:
                           TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                     ),
@@ -182,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   sliver: SliverToBoxAdapter(
                     child: Text(
-                      "Burgerlar",
+                      "Бургеры",
                       style:
                           TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                     ),

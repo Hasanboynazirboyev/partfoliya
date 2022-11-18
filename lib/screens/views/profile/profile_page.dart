@@ -17,11 +17,25 @@ class _ProfilPageState extends State<ProfilPage> {
   late String familya;
   late String ism;
   late String number;
+  late List iconPath;
+  late List nomlar ;
+
 
   @override
   void initState() {
-    familya = "Toxirov";
-    ism = "Alisher";
+    nomlar = [
+      "Филиали",
+      "Настройки",
+      "О сервисе",
+    ];
+
+    iconPath = [
+      "assets/svg/ic_location.svg",
+       "assets/svg/ic_settings.svg",
+        "assets/svg/ic_info.svg",
+    ];
+    familya = "Тохиров";
+    ism = "Алишер";
     number = "+998991234567";
     super.initState();
   }
@@ -31,7 +45,6 @@ class _ProfilPageState extends State<ProfilPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(255, 255, 255, 0.01),
       appBar: AppBar(
         toolbarHeight: 144,
         title: Column(
@@ -40,9 +53,9 @@ class _ProfilPageState extends State<ProfilPage> {
             Text(
               "$familya $ism",
               style: TextStyle(
-                  fontSize: 32,
+                  fontSize: 28,
                   color: Colors.black,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.w700),
             ),
             Text(
               number,
@@ -71,62 +84,10 @@ class _ProfilPageState extends State<ProfilPage> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          InkWell(
-            onTap: () {},
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 12, bottom: 6, left: 12, right: 12),
-              child: listTileFunc(
-                nomi: "Filiallar",
-                onTap: () {},
-                leading: SvgPicture.asset(
-                  width: 24,
-                  height: 24,
-                  "assets/svg/ic_location.svg",
-                ),
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: () {},
-            child: Padding(
-              padding:
-                  const EdgeInsets.only(top: 6, bottom: 6, left: 12, right: 12),
-              child: listTileFunc(
-                  nomi: "Sozlamalar",
-                  leading: SvgPicture.asset(
-                    width: 24,
-                    height: 24,
-                    "assets/svg/ic_settings.svg",
-                  ),
-                  onTap: () {}),
-            ),
-          ),
-          InkWell(
-            onTap: () {},
-            child: Padding(
-              padding:
-                  const EdgeInsets.only(top: 6, right: 12, left: 12, bottom: 6),
-              child: listTileFunc(
-                  nomi: "Servis haqida",
-                  leading: SvgPicture.asset(
-                    width: 24,
-                    height: 24,
-                    "assets/svg/ic_info.svg",
-                  ),
-                  onTap: () {}),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
-  Widget listTileFunc(
-      {required String nomi, required void Function() onTap, Widget? leading}) {
-    return Container(
+      body: ListView.separated(
+        padding: EdgeInsets.all(12),
+        itemBuilder: ((context, index) {
+       return Container(
       height: 64,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -142,10 +103,11 @@ class _ProfilPageState extends State<ProfilPage> {
               color: Color.fromRGBO(81, 38, 125, 0.05),
               borderRadius: BorderRadius.circular(8),
             ),
-            child: leading),
+            child: SvgPicture.asset(iconPath[index])
+            ),
         title: Text(
-          "$nomi",
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          "${nomlar[index]}",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
         ),
         trailing: Icon(
           Icons.chevron_right_outlined,
@@ -154,5 +116,12 @@ class _ProfilPageState extends State<ProfilPage> {
         ),
       ),
     );
+      }), separatorBuilder: ((context, index) {
+        return SizedBox(height: 12,);
+      }),
+       itemCount: 3)
+    );
   }
 }
+
+  

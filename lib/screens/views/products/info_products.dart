@@ -19,7 +19,7 @@ class _InfoProductsPageState extends State<InfoProductsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(title: Text("Burger")),
+      appBar: AppBar(title: Text("Бургеры",style: TextStyle(fontSize: 17,fontWeight: FontWeight.w600),),centerTitle: true,),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -43,15 +43,15 @@ class _InfoProductsPageState extends State<InfoProductsPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Max Burger",
-                  style: TextStyle(fontSize: 24),
+                  "Макс Бургер",
+                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700),
                 ),
                 SizedBox(
                   height: 5,
                 ),
                 Text(
-                  """Burgerlar juda mazali va hozirgi kunda bizda chegirma ketmoqda agar 2 ta burger harid qilsangiz uchinchisi tekinga qo'shib beriladi """,
-                  style: TextStyle(fontSize: 20),
+                  """Закручен со вкусом! Кусочки нежнейшего куриногофиле в хрустящей остерой чили оригинальнойпанировке с сочными листьями салата, кусочкамипомидора и нежным соусом мы завернули впшеничную лепешку и поджарили в тостере """,
+                  style: TextStyle(fontSize: 17,fontWeight: FontWeight.w400,color: Color(0xfff818C99)),
                 ),
               ],
             ),
@@ -59,7 +59,7 @@ class _InfoProductsPageState extends State<InfoProductsPage> {
           ],
          ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 44),
+            padding: const EdgeInsets.only(bottom: 12),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -86,7 +86,7 @@ class _InfoProductsPageState extends State<InfoProductsPage> {
                   alignment: Alignment.center,
                   width: 44,
                   height: 44,
-                  color: Colors.white,
+                  
                   child: Text(
                     "${son}",
                     style: TextStyle(fontSize: 18),
@@ -115,7 +115,7 @@ class _InfoProductsPageState extends State<InfoProductsPage> {
                     onPressed: (() {}), child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Dobavit      "),
+                        Text("Добавить",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
                         Text("     ${son * 25000} sum "),
                       ],
                     ))

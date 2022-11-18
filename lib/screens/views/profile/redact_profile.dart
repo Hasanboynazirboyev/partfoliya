@@ -40,7 +40,8 @@ class _RedactProfilState extends State<RedactProfil> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("profilni o'zgartirish"),
+        centerTitle: true,
+        title: Text("Редактировать профиль",style: TextStyle(fontSize: 17),),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,8 +54,8 @@ class _RedactProfilState extends State<RedactProfil> {
             height: 12,
           ),
               Text(
-                "\t\t\tFamilya",
-                style: TextStyle(fontSize: 16),
+                "\t\t\tФамилия",
+                style: TextStyle(fontSize: 16,color: Color(0xfff818C99)),
               ),
               InkWell(
                 child: Container(
@@ -68,7 +69,7 @@ class _RedactProfilState extends State<RedactProfil> {
                     controller: _surenamecontroller,
                     decoration: InputDecoration(
                       
-                      hintText: "Familya kirgazing",
+                      
                       enabledBorder: InputBorder.none,
                       disabledBorder: InputBorder.none,
                       contentPadding: EdgeInsets.only(left: 12),
@@ -92,8 +93,8 @@ class _RedactProfilState extends State<RedactProfil> {
                 },
               ),
               Text(
-                "\t\t\tIsm",
-                style: TextStyle(fontSize: 16),
+                "\t\t\tИмя",
+                style: TextStyle(fontSize: 16,color: Color(0xfff818C99)),
               ),
               InkWell(
                 child: Container(
@@ -105,7 +106,7 @@ class _RedactProfilState extends State<RedactProfil> {
                   child: TextField(
                     controller: _namecontroller,
                     decoration: InputDecoration(
-                      hintText: "Ism kirgazing",
+                      
                       contentPadding: EdgeInsets.only(left: 12),
 
                       enabledBorder: InputBorder.none,
@@ -127,8 +128,8 @@ class _RedactProfilState extends State<RedactProfil> {
                 },
               ),
               Text(
-                "\t\t\Telefo raqam",
-                style: TextStyle(fontSize: 16),
+                "\t\t\tНомер телефона",
+                style: TextStyle(fontSize: 16,color: Color(0xfff818C99)),
               ),
               InkWell(
                 child: Container(
@@ -142,7 +143,7 @@ class _RedactProfilState extends State<RedactProfil> {
                     keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(left: 12),
-                      hintText: "raqam kirgazing",
+                      
                       enabledBorder: InputBorder.none,
                       disabledBorder: InputBorder.none,
                       focusedBorder: OutlineInputBorder(
@@ -164,15 +165,15 @@ class _RedactProfilState extends State<RedactProfil> {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 10, left: 20),
+            padding: const EdgeInsets.only(bottom: 10, left: 12,right: 12),
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 66, 8, 132),
-                    minimumSize: Size(351, 48)),
+                    minimumSize: Size(400, 48)),
                 onPressed: ()  {
                   Navigator.pop(context);
                 },
-                child: Text("Saqalash ")),
+                child: Text("Подтвердить",style: TextStyle(fontSize: 15),)),
           )
         ],
       ),

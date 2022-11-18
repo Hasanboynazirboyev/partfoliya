@@ -54,7 +54,7 @@ class _BacketProductsState extends State<BacketProducts> {
                           padding: EdgeInsets.only(top: 12, right: 23),
                           child: Text(
                             'Klub Sendvich\n"Yangilik"',
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600),
                           )),
                       Padding(
                         padding: const EdgeInsets.only(
@@ -81,7 +81,7 @@ class _BacketProductsState extends State<BacketProducts> {
                               color: Colors.white,
                               child: Text(
                                 "${widget.sendvich}",
-                                style: TextStyle(fontSize: 18),
+                                style: TextStyle(fontSize: 15),
                               ),
                             ),
                             InkWell(
@@ -105,7 +105,7 @@ class _BacketProductsState extends State<BacketProducts> {
                     padding: const EdgeInsets.only(top: 12, right: 12),
                     child: Text(
                       "${widget.burgernarx}",
-                      style: TextStyle(fontSize: 18, color: Colors.blue),
+                      style: TextStyle(fontSize: 15, color: Color(0xfff51267D)),
                     ),
                   ),
                 ],
@@ -135,7 +135,7 @@ class _BacketProductsState extends State<BacketProducts> {
                           padding: EdgeInsets.only(top: 12, right: 23),
                           child: Text(
                             'Max Burger',
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600),
                           )),
                       Padding(
                         padding: const EdgeInsets.only(
@@ -162,7 +162,7 @@ class _BacketProductsState extends State<BacketProducts> {
                               color: Colors.white,
                               child: Text(
                                 "${widget.burger}",
-                                style: TextStyle(fontSize: 18),
+                                style: TextStyle(fontSize: 15),
                               ),
                             ),
                             InkWell(
@@ -186,7 +186,7 @@ class _BacketProductsState extends State<BacketProducts> {
                     padding: const EdgeInsets.only(top: 12, right: 12),
                     child: Text(
                       "${widget.burgernarx}",
-                      style: TextStyle(fontSize: 18, color: Colors.blue),
+                      style: TextStyle(fontSize: 15, color: Color(0xfff51267D)),
                     ),
                   ),
                 ],
@@ -205,11 +205,11 @@ class _BacketProductsState extends State<BacketProducts> {
                   children: [
                     Text("Buyurtma to'lovi",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
+                            fontSize: 17, fontWeight: FontWeight.w500)),
                     Text(
                         "${(widget.burger + widget.sendvich) * widget.burgernarx}",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold))
+                            fontSize: 17, fontWeight: FontWeight.w500))
                   ],
                 ),
               ),
@@ -217,7 +217,7 @@ class _BacketProductsState extends State<BacketProducts> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 12, right: 12, bottom: 41),
+          padding: const EdgeInsets.only(left: 12, right: 12, bottom: 12),
           child: ElevatedButton(
             onPressed: () {},
             child: Text("oformit zakaz"),
